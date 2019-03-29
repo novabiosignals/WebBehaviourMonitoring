@@ -283,7 +283,7 @@
 
     // Send data via ajax POST
     var http = new XMLHttpRequest();
-    var url = '/wbm/wbm.php';
+    var url = './wbm/wbm.php';
     
     http.open("POST", url);
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
