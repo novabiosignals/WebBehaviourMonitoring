@@ -24,13 +24,13 @@ To install and configure MAMP, follow [these instructions](https://www.betterhos
 #### Using Ubuntu Linux - Install LAMP
 If using the LAMP stack, follow these instructions (based on this [tutorial](https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-18-04-lamp/)) to install and setup Apache and PHP 7.2 on a Ubuntu Linux (we will not install MySQL or/and MariaDB because to use **wbm.php** the database is not needed). If you have another Linux distro, search for instructions on how to install the LAMP stack.
 
-**1. Install Apache2**
+##### 1. Install Apache2
 ```
 sudo apt-get -y install apache2
 ```
 To test the installation, open a browser and write *http://localhost/* on the URL bar. You should see the Apache Ubuntu Default Page.
 
-**2. Install PHP 7.2**
+##### 2. Install PHP 7.2
 
 Install PHP and Apache PHP module.
 ```
@@ -40,9 +40,15 @@ Restart Apache.
 ```
 sudo systemctl restart apache2
 ```
-**3. Test PHP installation**
+##### 3. Test PHP installation
 
-The document root folder for Apache on Ubuntu is **/var/www/html**. Create a file info.php on this folder with the following content:
+The document root folder for Apache on Ubuntu is **/var/www/html**. Add permissions to this folder. 
+
+```
+sudo chown -R yourusername /var/www/html
+```
+
+Create a file info.php on this folder with the following content:
 ```
 <?php 
 phpinfo();
@@ -51,7 +57,12 @@ Go to the URL *http://localhost/info.php* and if everything is well installed yo
 
 #### Install WBM
 
-After installing WAMP, MAMP or LAMP create a new folder inside Apache document root for your project. Copy your project files to that folder and copy the WBM files and folders (**src/wbm** and **src/wbm.js**) to your file structure. The folder **src/wbm** should be copied to the project root. Change the folder owner and group to *www-data*. Include the JS file on the main HTML file *head* tag:
+After installing WAMP, MAMP or LAMP create a new folder inside Apache document root for your project. Copy your project files to that folder and copy the WBM files and folders (**src/wbm** and **src/wbm.js**) to your file structure. The folder **src/wbm** should be located in the project root. Change the folder owner and group to *www-data*. 
+```
+sudo chown -R yourusername:www-data /var/www/html/projectname
+```
+
+Include the JS file on the main HTML file *head* tag:
 ```
 <script type="text/javascript" src="path/to/the/file/wbm.js"></script>
 ```
