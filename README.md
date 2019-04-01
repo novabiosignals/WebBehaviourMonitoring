@@ -57,7 +57,7 @@ Go to the URL *http://localhost/info.php* and if everything is well installed yo
 
 #### Install WBM
 
-After installing WAMP, MAMP or LAMP create a new folder inside Apache document root for your project. Copy your project files to that folder and copy the WBM files and folders (**src/wbm** and **src/wbm.js**) to your file structure. The folder **src/wbm** should be located in the project root. Change the folder owner and group to *www-data*. 
+After installing WAMP, MAMP or LAMP create a new folder inside Apache document root for your project. Copy your project files to that folder and copy the WBM files and folders (**src/wbm** and **src/wbm.js**) to your file structure. The folder **src/wbm** should be located in the project root. Change the folder owner and group to *www-data* (for Linux users). 
 ```
 sudo chown -R yourusername:www-data /var/www/html/projectname
 ```
