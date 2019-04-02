@@ -290,7 +290,7 @@
     http.onreadystatechange = function() {
       if (http.readyState == XMLHttpRequest.DONE && logging) {
         console.log("r:")
-        console.log(r);
+        console.log(http);
       }
     }
     http.send( "json="+(JSON.stringify({'file': f,'data': s})) );   
