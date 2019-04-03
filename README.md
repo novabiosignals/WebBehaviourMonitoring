@@ -102,6 +102,8 @@ Inside the file, the data is organized in the following way:
 ![Ricardo Tonet](https://avatars1.githubusercontent.com/u/1868045?s=40&v=4) [Ricardo Tonet](https://github.com/blackchacal)
 ![Catia Cepeda](https://avatars2.githubusercontent.com/u/9532534?s=40&v=4)[Catia Cepeda](https://github.com/catiamcepeda)
 
+The contributors belong to the LIBPhys Biosignals Group, Physics Department, Faculdade de Ciências e Tecnologia da Universidade NOVA de Lisboa (FCTUNL). For more information visit the [website](http://biosi.gnals.org/).
+
 ## License
 
 GPLv2
